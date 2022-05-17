@@ -1,0 +1,95 @@
+$color1: #ff7b00;
+$color2: #000000;
+
+body{
+    background-color: $color2;
+    .header{
+        background-color: $color1;
+        
+        .dropdown-menu{
+            background-color: $color1;
+        }
+        .nav-link{
+            font-size: 18px;
+        }
+    }
+}
+
+
+.texto-lorem{
+    color: $color1;
+    font-size: medium;
+    padding-left: 650px;
+    padding-right: 650px;
+    text-align: center;
+}
+
+
+footer {
+    background-color: $color2;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Cinzel', serif;
+    
+    .footerContactos {
+        text-align: center;
+        
+        .textoContactos {
+            color: $color1;
+            font-family: 'Cinzel', serif;
+        }
+    }
+}
+.card{
+    margin: auto;
+
+    .card-body{
+        color: $color1;
+        text-align: center;
+    }
+
+    .titulos1{
+        color: $color1;
+    }
+ }
+/*MAP-GET*/
+ $encabezados: (
+     h1: 4em,
+     h2: 3em,
+     h3: 2em,
+     h4: 1em,
+     h5: 0.75em,
+     h6: 0.35em,
+ );
+
+ $h1: map-get($encabezados, h1);
+
+
+/*MIXIN*/
+ @mixin texto-lorem {
+    color: $color1;
+    font-size: small;
+    padding-left: 650px;
+    padding-right: 650px;
+    text-align: center;
+ }
+
+ .texto-lorem {
+     @include texto-lorem;
+ }
+
+
+/*EXTEND*/
+ .logo {
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;      
+}
+
+ .logo-back {
+    @extend .logo;
+    background-color:#ff7b00;
+}
+
+
